@@ -149,7 +149,7 @@ jobs:
         if [ $BUILD_VERSION == "chongshengB" ]; then
           echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> configs/templates/$TNAME.config      #simple-obfs混淆插件
           echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> configs/templates/$TNAME.config      #adbyby plus+
-          echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> configs/templates/$TNAME.config     #阿里DDNS
+          echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> configs/templates/$TNAME.config     #阿里DDNS
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> configs/templates/$TNAME.config    #smartdns
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> configs/templates/$TNAME.config #smartdns二进制文件
           # 特别注意，开启v2同样需要开启113行的shadowsocks，否则不会编译
