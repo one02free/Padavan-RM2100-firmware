@@ -127,7 +127,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> configs/templates/$TNAME.config         #删除SFTP
         echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> configs/templates/$TNAME.config      #删除TCPDUMP
         echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> configs/templates/$TNAME.config     #删除EAP_PEAP
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=n" >> configs/templates/$TNAME.config   #删除OPENSSL_EC
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> configs/templates/$TNAME.config   #删除OPENSSL_EC
         echo "CONFIG_FIRMWARE_CPU_900MHZ=n" >> configs/templates/$TNAME.config           #开启超频，仅MT7621可用
         #########################################################################################
         # 自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
