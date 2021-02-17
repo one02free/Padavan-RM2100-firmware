@@ -71,7 +71,6 @@ jobs:
         # 因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ###################################################################################################
         sed -i '/CONFIG_FIRMWARE_INCLUDE_LANG_UK/d' configs/templates/$TNAME.config      #删除配置项英文界面
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config         #删除frpc
         sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' configs/templates/$TNAME.config          #删除配置项QOS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' configs/templates/$TNAME.config       #删除配置项SMBD36
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d' configs/templates/$TNAME.config     #删除配置项DDNS_SSL
@@ -103,7 +102,6 @@ jobs:
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件。
         ####################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_LANG_CN=y" >> configs/templates/$TNAME.config      #设置界面简体中文
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config         #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> configs/templates/$TNAME.config          #删除QOS
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> configs/templates/$TNAME.config       #使用SMBD36新版本
         echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=n" >> configs/templates/$TNAME.config     #删除DDNS_SSL
@@ -138,9 +136,11 @@ jobs:
         # sed -i '/自定义项/d' configs/templates/$TNAME.config
         # echo "自定义项=y" >> configs/templates/$TNAME.config
         
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' configs/templates/$TNAME.config         #测试样例
-        echo "CONFIG_FIRMWARE_INCLUDE_FTPD=n" >> configs/templates/$TNAME.config         #测试样例
-        
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' configs/templates/$TNAME.config         #测试样例
+        #echo "CONFIG_FIRMWARE_INCLUDE_FTPD=n" >> configs/templates/$TNAME.config         #测试样例
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config          #删除frpc
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config          #内网穿透frpc
+
         #########################################################################################
         # 以下插件为 chongshengB 版本专属插件，hanwckf 版不可用!!!
         # 如需使用这些插件，请修改24行 BUILD_VERSION 为 chongshengB
