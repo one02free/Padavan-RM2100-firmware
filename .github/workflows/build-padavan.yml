@@ -122,7 +122,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> configs/templates/$TNAME.config         #删除工具NANO
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> configs/templates/$TNAME.config         #删除工具HTOP
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> configs/templates/$TNAME.config        #文件传输工具LRZSZ
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> configs/templates/$TNAME.config         #删除工具CURL
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> configs/templates/$TNAME.config         #删除工具CURL
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=n" >> configs/templates/$TNAME.config      #删除OPENSSH
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> configs/templates/$TNAME.config         #删除SFTP
         echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> configs/templates/$TNAME.config      #删除TCPDUMP
@@ -154,7 +154,7 @@ jobs:
           # 特别注意，开启v2同样需要开启113行的shadowsocks，否则不会编译
           echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> configs/templates/$TNAME.config       #集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
           echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> configs/templates/$TNAME.config      #集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
-          echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> configs/templates/$TNAME.config   #KP广告过滤
+          echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >> configs/templates/$TNAME.config   #KP广告过滤
           echo "CONFIG_FIRMWARE_INCLUDE_CADDY=n" >> configs/templates/$TNAME.config       #在线文件管理服务
           echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> configs/templates/$TNAME.config    #集成caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
           echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> configs/templates/$TNAME.config #集成AdGuardHome
