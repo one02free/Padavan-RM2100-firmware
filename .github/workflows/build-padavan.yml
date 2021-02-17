@@ -138,7 +138,10 @@ jobs:
         
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' configs/templates/$TNAME.config         #测试样例
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=n" >> configs/templates/$TNAME.config         #测试样例
-        
+
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' configs/templates/$TNAME.config          #删除frpc
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config          #内网穿透frpc
+
         #########################################################################################
         # 以下插件为 chongshengB 版本专属插件，hanwckf 版不可用!!!
         # 如需使用这些插件，请修改24行 BUILD_VERSION 为 chongshengB
