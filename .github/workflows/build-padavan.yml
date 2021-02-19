@@ -121,7 +121,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> configs/templates/$TNAME.config       #使用工具IPERF3
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> configs/templates/$TNAME.config         #删除工具NANO
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> configs/templates/$TNAME.config         #删除工具HTOP
-        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> configs/templates/$TNAME.config        #删除工具LRZSZ
+        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> configs/templates/$TNAME.config        #使用工具LRZSZ
         echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> configs/templates/$TNAME.config         #使用工具CURL
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> configs/templates/$TNAME.config      #使用OPENSSH
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> configs/templates/$TNAME.config         #删除SFTP
@@ -147,7 +147,7 @@ jobs:
         # 如需使用这些插件，请修改24行 BUILD_VERSION 为 chongshengB
         #########################################################################################
         if [ $BUILD_VERSION == "chongshengB" ]; then
-          echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> configs/templates/$TNAME.config      #simple-obfs混淆插件
+          echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> configs/templates/$TNAME.config      #simple-obfs混淆插件
           echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> configs/templates/$TNAME.config      #adbyby plus+
           echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> configs/templates/$TNAME.config     #阿里DDNS
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> configs/templates/$TNAME.config    #smartdns
