@@ -51,8 +51,7 @@ jobs:
     - name: Install Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.16.3
-       #go-version: ${{ steps.vars.outputs.go_version }}
+       go-version: ${{ steps.vars.outputs.go_version }}
     - name: Build Firmware
       run: |
         cd /opt/rt-n56u/trunk
